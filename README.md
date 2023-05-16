@@ -1,5 +1,5 @@
 # Frontend Components
-This repo contains many frontend components developed using HTML, CSS and JS.
+This repo contains many frontend components developed using HTML, CSS and JS, all components are responsive.
 <br/>
 Some of components developed using Grid and Flex etc..
 Each component contains a `style-guide.md` file which contains all colors code and all the font used from [GoogleFont](https://fonts.google.com/) and its weights.
