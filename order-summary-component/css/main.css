@@ -1,0 +1,125 @@
+/* 
+Fonts
+    font-family: 'Red Hat Display', sans-serif;
+*/
+
+/* Root */
+:root {
+  --paragraphFontSize: 16px;
+  /* Primary Colors */
+  --planBg: hsl(225, 100%, 94%);
+  --buttonBg: hsl(245, 75%, 52%);
+  /* Neutral Colors */
+  --cardBg: hsl(0, 0%, 100%);
+  --textDesaturatedblue: hsl(224, 23%, 55%);
+  --textDarkBlue: hsl(223, 47%, 23%);
+}
+
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: "Red Hat Display", sans-serif;
+}
+.mTopBottom {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+/* Body */
+body {
+  min-height: 100vh;
+  padding: 8px;
+  background-color: var(--planBg);
+  background-image: url("../images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  width: min(375px, 100%);
+  margin: 8px;
+  border-radius: 16px;
+  background-color: var(--cardBg);
+  overflow: hidden;
+}
+section {
+  text-align: center;
+  padding: 24px;
+}
+section h1 {
+  color: var(--textDarkBlue);
+}
+section p {
+  font-size: var(--paragraphFontSize);
+  color: var(--textDesaturatedblue);
+  line-height: 1.5pc;
+}
+section .plan {
+  border-radius: 8px;
+  background-color: #f8f9fe;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 16px;
+  font-size: var(--paragraphFontSize);
+}
+.plan div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 12px;
+}
+.plan button {
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  color: var(--buttonBg);
+  text-decoration: underline;
+  font-weight: 900;
+  cursor: pointer;
+  padding-right: 10px;
+  transition: color 350ms;
+}
+.plan button:hover {
+  text-decoration: none;
+  color: hsla(245, 75%, 52%, 0.782);
+}
+.plan img {
+  background-color: var(--planBg);
+  border-radius: 50%;
+}
+.plan div div p:first-child {
+  font-weight: 900;
+  color: var(--textDarkBlue);
+}
+main footer {
+  padding: 0 24px;
+}
+main footer button {
+  outline: 0;
+  border: 0;
+  width: 100%;
+  font-weight: 700;
+  font-size: var(--paragraphFontSize);
+  cursor: pointer;
+}
+main footer button:first-child {
+  background-color: var(--buttonBg);
+  border-radius: 8px;
+  color: white;
+  padding: 16px;
+  transition: background-color 350ms;
+}
+main footer button:first-child:hover {
+  background-color: hsla(245, 75%, 52%, 0.782);
+}
+main footer button:nth-child(2) {
+  background-color: transparent;
+  color: var(--textDesaturatedblue);
+  transition: color 350ms;
+}
+main footer button:nth-child(2):hover {
+  color: var(--textDarkBlue);
+}

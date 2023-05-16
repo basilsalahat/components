@@ -1,0 +1,140 @@
+/* 
+Fonts
+    font-family: 'Outfit', sans-serif;
+*/
+
+/* Root Start */
+:root {
+  --paragraphfontsize: 18px;
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --mainBG: hsl(217, 54%, 11%);
+  --cardBG: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+/* Root End */
+
+/* Global Start*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  user-select: none;
+  font-family: "Outfit", sans-serif;
+  color: white;
+}
+p {
+  font-size: var(--paragraphfontsize);
+}
+/* Global End*/
+
+/* Global Classes Start */
+.margin-top {
+  margin-top: 16px;
+}
+.seperator {
+  width: 100%;
+  height: 0.5px;
+  background-color: var(--line);
+}
+.c-pointer {
+  cursor: pointer;
+}
+.active-state {
+  transition: color 350ms;
+}
+.active-state:hover {
+  color: var(--Cyan);
+}
+/* Global Classes End */
+
+/* Body Start */
+body {
+  min-height: 100vh;
+  padding: 8px;
+  background-color: var(--mainBG);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Body End */
+
+/* Main Start */
+main {
+  width: min(100%, 375px);
+  margin: 8px;
+  padding: 22px;
+  background-color: var(--cardBG);
+  border-radius: 12px;
+}
+
+/* Header Start*/
+header {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+header .productImg {
+  width: 100%;
+  filter: blur(0);
+  transition: filter 350ms;
+}
+header .viewImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 350ms;
+}
+header:hover .viewImg {
+  opacity: 1;
+}
+header:hover .productImg {
+  filter: blur(4px);
+}
+/* Header End */
+
+/* Details Start */
+.details p {
+  color: var(--Soft-blue);
+}
+.details-inside,
+.details-inside div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.blockchain p {
+  color: var(--Cyan);
+}
+.small-logo {
+  margin-right: 8px;
+}
+/* Details End */
+
+/* Footer Start */
+footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+footer img {
+  width: 35px;
+  border-radius: 50%;
+  border: solid 0.5px var(--White);
+  margin-right: 12px;
+}
+footer p {
+  color: var(--Soft-blue);
+}
+footer p,
+footer span {
+  font-weight: 300;
+}
+/* Footer End */
+
+/* Main End */

@@ -1,0 +1,123 @@
+/* 
+Fonts
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif;
+*/
+
+/* Root Start */
+:root {
+  --fontSize: 15px;
+  --paragraphscolor: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%); /* (background, headings, buttons) */
+  --cardColor1: hsl(31, 77%, 52%);
+  --cardColor2: hsl(184, 100%, 22%);
+  --cardColor3: hsl(179, 100%, 13%);
+}
+/* Root End */
+
+/* Global Start*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+/* Global End*/
+
+/* Body Start */
+body {
+  min-height: 100vh;
+  padding: 16px;
+  background-color: var(--Very-light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Body End */
+
+/* Main Start */
+main {
+  width: 60%;
+  display: grid;
+  overflow: hidden;
+  border-radius: 8px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.card1 {
+  background-color: var(--cardColor1);
+  color: var(--cardColor1);
+}
+.card2 {
+  background-color: var(--cardColor2);
+  color: var(--cardColor2);
+}
+.card3 {
+  background-color: var(--cardColor3);
+  color: var(--cardColor3);
+}
+main section {
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+section h2 {
+  text-transform: uppercase;
+  color: var(--Very-light-gray);
+  font-family: "Big Shoulders Display", cursive;
+  margin: 16px 0;
+}
+section p {
+  color: var(--paragraphscolor);
+  font-size: var(--fontSize);
+  font-family: "Lexend Deca", sans-serif;
+  margin: 16px 0;
+  font-weight: 400;
+  line-height: 1.8pc;
+}
+section button {
+  font-family: "Lexend Deca", sans-serif;
+  outline: 0;
+  border: 0;
+  background-color: var(--Very-light-gray);
+  padding: 12px 16px;
+  border-radius: 20px;
+  margin-top: 60px;
+  cursor: pointer;
+  color: inherit;
+  border: solid 2px transparent;
+  transition: color 350ms, background-color 350ms;
+}
+section button:hover {
+  color: var(--Very-light-gray);
+  background-color: transparent;
+  border: solid 2px var(--Very-light-gray);
+}
+/* Main End */
+
+/* Media Queries Start */
+@media only screen and (max-width: 992px) {
+  main {
+    width: 60%;
+    display: grid;
+    overflow: hidden;
+    border-radius: 8px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card1 {
+    grid-column: span 2;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main {
+    width: min(100%, 400px);
+    display: grid;
+    overflow: hidden;
+    border-radius: 8px;
+    grid-template-columns: 1fr;
+  }
+  .card1 {
+    grid-column: auto;
+  }
+}
+/* Media Queries End */
